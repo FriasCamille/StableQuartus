@@ -46,6 +46,8 @@ mv /root/intelFPGA_lite /workspace/
 If the USB blaster is not recognized create a rule in host machine with:
 ```Bash
 sudo cp /StableQuartus/51-usbblaster.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules
+sudo udevadm trigger
 ```
 then restart the docker
 ## Running  
