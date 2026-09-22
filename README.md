@@ -43,6 +43,11 @@ Create a file for all your projects in workspace and move intelFPGA_lite to work
 mkdir /workspace/projects
 mv /root/intelFPGA_lite /workspace/
 ```
+If the USB blaster is not recognized create a rule in host machine with:
+```Bash
+sudo cp /StableQuartus/51-usbblaster.rules /etc/udev/rules.d/
+```
+then restart the docker
 ## Running  
 Now in your host you can run the docker by:
 ```Bash
