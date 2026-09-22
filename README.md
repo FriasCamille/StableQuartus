@@ -37,11 +37,6 @@ Run the installer
 ```
 The GUI will open, you can select the family of your FPGA and other settings for your Quartus.
 
-Now you have Quartus installed, you can create an alias <Optional> with 
-```Bash
-echo "alias quartus='/root/intelFPGA_lite/quartus/quartus'">> ~/.bashrc
-source ~/.bashrc
-```
 ### Recomendation 
 Create a file for all your projects in workspace and move intelFPGA_lite to workspace or never do docker system prune and use docker start -ai <your docker ID> (you can see the id with docker ps -a)
 ```Bash
