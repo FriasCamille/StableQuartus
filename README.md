@@ -4,8 +4,10 @@ This repo is a try to use an stable Quartus Lite for linux in any linux with Doc
 - Docker installed
 - Linux based distro
 - X11 
+- Quartus installed  (Tested with Quartus-lite-18.1 )
 ## Instalation
 clone and move to the repo
+Download and decompress Quartus installer here(Sorry i can't uploaded here) 
 ### Build the docker
 ```Bash
 docker build -t quartus:18.1 .
@@ -19,7 +21,7 @@ docker run -it \ # you can add if you are testing --rm \
   -v /dev/bus/usb:/dev/bus/usb \
   --privileged \
   -v $(pwd)/proyectos:/workspace \
-  -v ./Quartus-lite-18.1.0.625-linux:/installer \
+  -v ./Quartus-lite-18.1.0.625-linux:/installer \ # Change to fit the directory where you decompressed th quartus installer .tar
   quartus:18.1 \
   bash
 ```
@@ -40,8 +42,8 @@ Now you have Quartus installed, you can create an alias <Optional> with
 echo "alias quartus='/root/intelFPGA_lite/quartus/quartus'">> ~/.bashrc
 source ~/.bashrc
 ```
-### Recomended things 
-Create a file for all your projects in workspace and move intelFPGA_lite to workspace or never do docker system prune or forget the docker ID 
+### Recomendation 
+Create a file for all your projects in workspace and move intelFPGA_lite to workspace or never do docker system prune and use docker start -ai <your docker ID> (you can see the id with docker ps -a)
 ```Bash
 mkdir /workspace/projects
 mv /root/intelFPGA_lite /workspace/
