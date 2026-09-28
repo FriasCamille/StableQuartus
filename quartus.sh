@@ -1,3 +1,4 @@
+xhost +local:root
 docker run -it --rm \
   --net=host \
   -e DISPLAY=$DISPLAY \
